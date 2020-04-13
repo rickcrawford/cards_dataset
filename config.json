@@ -1,0 +1,39 @@
+{
+    "model" : {
+        "min_input_size":       720,
+        "max_input_size":       720,
+        "anchors":              [25,28, 25,54, 37,49, 38,81, 48,39, 53,26, 57,73, 74,57, 81,38],
+        "labels":               ["Ah", "Kh", "Qh", "Jh", "10h", "9h", "8h", "7h", "6h", "5h", "4h", "3h", "2h", "Ad", "Kd", "Qd", "Jd", "10d", "9d", "8d", "7d", "6d", "5d", "4d", "3d", "2d", "Ac", "Kc", "Qc", "Jc", "10c", "9c", "8c", "7c", "6c", "5c", "4c", "3c", "2c", "As", "Ks", "Qs", "Js", "10s", "9s", "8s", "7s", "6s", "5s", "4s", "3s", "2s", "JK"]
+    },
+
+    "train": {
+        "train_image_folder":   "/Users/rick/Workspace/python/cards/keras-yolo3/card_dataset/train/images/",
+        "train_annot_folder":   "/Users/rick/Workspace/python/cards/keras-yolo3/card_dataset/train/annots/",
+        "cache_name":           "cards_train.pkl",
+
+        "train_times":          8,
+        "batch_size":           16,
+        "learning_rate":        1e-4,
+        "nb_epochs":            100,
+        "warmup_epochs":        3,
+        "ignore_thresh":        0.5,
+        "gpus":                 "0",
+
+        "grid_scales":          [1,1,1],
+        "obj_scale":            5,
+        "noobj_scale":          1,
+        "xywh_scale":           1,
+        "class_scale":          1,
+
+        "tensorboard_dir":      "logs",
+        "saved_weights_name":   "cards.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "/Users/rick/Workspace/python/cards/keras-yolo3/card_dataset/valid/images/",
+        "valid_annot_folder":   "/Users/rick/Workspace/python/cards/keras-yolo3/card_dataset/valid/annots/",
+        "cache_name":           "cards_valid.pkl",
+        "valid_times":          1
+    }
+}
