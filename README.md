@@ -23,3 +23,10 @@ Run the notebook:
 ```bash
 jupyter notebook
 ```
+
+
+To build the dataset using YOLO v3 Darknet, first download the darknet53.conv.74 file, and then kick off the training based on the instructions from the yolo website.
+
+```bash
+darknet detector train data/obj.data cfg/yolov3.cfg darknet53.conv.74 -map
+```
